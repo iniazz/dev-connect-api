@@ -1,7 +1,7 @@
-﻿using DevConnect___Complete_Developer_Networking_Platform.Models;
+﻿using DevConnect.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace DevConnect___Complete_Developer_Networking_Platform.Data
+namespace DevConnect.Data
 {
     public class AppDbContext : DbContext
     {

@@ -1,4 +1,4 @@
-using DevConnect___Complete_Developer_Networking_Platform.Data;
+using DevConnect.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

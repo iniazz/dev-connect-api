@@ -1,4 +1,4 @@
-﻿namespace DevConnect___Complete_Developer_Networking_Platform.Models
+﻿namespace DevConnect.Models
 {
     public class User
     {

@@ -1,5 +1,5 @@
-﻿using DevConnect___Complete_Developer_Networking_Platform.Data;
-using DevConnect___Complete_Developer_Networking_Platform.Models;
+﻿using DevConnect.Data;
+using DevConnect.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DevConnect___Complete_Developer_Networking_Platform.Controllers
+namespace DevConnect.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
