@@ -2,10 +2,6 @@
 using DevConnect.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace DevConnect.Controllers
 {
@@ -65,8 +61,11 @@ namespace DevConnect.Controllers
 
             try
             {
+                user.Id = 0;
+
                 _dbContext.Users.Add(user);
                 await _dbContext.SaveChangesAsync();
+
                 return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
             }
             catch (Exception ex)

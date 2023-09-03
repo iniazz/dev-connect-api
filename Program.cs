@@ -25,6 +25,16 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseRouting();
+
+// Configure CORS to allow requests from your React app
+app.UseCors(builder =>
+{
+    builder.WithOrigins("http://localhost:3000") // Replace with the actual URL of your React app
+           .AllowAnyMethod()
+           .AllowAnyHeader();
+});
+
 app.UseAuthorization();
 
 app.MapControllers();
