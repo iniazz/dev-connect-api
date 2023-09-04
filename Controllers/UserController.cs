@@ -16,7 +16,7 @@ namespace DevConnect.Controllers
             _dbContext = dbContext;
         }
 
-        // GET: api/user
+        // GET: api/User
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
@@ -31,7 +31,7 @@ namespace DevConnect.Controllers
             }
         }
 
-        // GET: api/user/5
+        // GET: api/User/5
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
@@ -50,7 +50,7 @@ namespace DevConnect.Controllers
             }
         }
 
-        // POST: api/user
+        // POST: api/User
         [HttpPost]
         public async Task<ActionResult<User>> CreateUser(User user)
         {
@@ -74,7 +74,7 @@ namespace DevConnect.Controllers
             }
         }
 
-        // PUT: api/user/5
+        // PUT: api/User/5
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser(int id, User updatedUser)
         {
@@ -106,7 +106,7 @@ namespace DevConnect.Controllers
             }
         }
 
-        // DELETE: api/user/5
+        // DELETE: api/User/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
