@@ -1,6 +1,8 @@
 using DevConnect.Data;
 using Microsoft.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,9 +18,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-
-WebHost.CreateDefaultBuilder(args)
-    .UseUrls("http://0.0.0.0:5000", "https://0.0.0.0:5001");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
