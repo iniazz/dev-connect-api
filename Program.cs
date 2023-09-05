@@ -1,4 +1,5 @@
 using DevConnect.Data;
+using Microsoft.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,9 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+WebHost.CreateDefaultBuilder(args)
+    .UseUrls("http://0.0.0.0:5000", "https://0.0.0.0:5001");
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -30,9 +34,9 @@ app.UseRouting();
 // Configure CORS to allow requests from your React app
 app.UseCors(builder =>
 {
-    builder.WithOrigins("http://localhost:3000") // Replace with the actual URL of your React app
-           .AllowAnyMethod()
-           .AllowAnyHeader();
+    builder.WithOrigins("http://localhost:3000", "https://cdn-dev-connect.netlify.app") // Add your React app's domain here
+        .AllowAnyMethod()
+        .AllowAnyHeader();
 });
 
 app.UseAuthorization();

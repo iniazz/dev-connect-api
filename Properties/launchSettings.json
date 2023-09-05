@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "DevConnect___Complete_Developer_Networking_Platform": {
+    "DevConnect": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
